@@ -8,7 +8,7 @@ export interface IUserPayload {
 
 type IU = IUserPayload | IUser | IPostsPayload;
 
-interface IPost {
+export interface IPost {
   _id: string;
   title: string;
   fullText: string;
@@ -16,6 +16,8 @@ interface IPost {
   likes: [];
   image: string;
   postedBy: string;
+  dateCreated: string;
+  user?: IUser | any;
 }
 
 export interface IPostsPayload {

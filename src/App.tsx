@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Modal from "./components/Modal";
 import { routes } from "./config/routes";
 import { UserActions } from "./redux/actions/user";
+import PrivateRoute from "./routes/private";
 import PublicRoute from "./routes/public";
 
 function App() {
@@ -20,11 +21,18 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <Switch>
-        <Header />
         {routes.map(({ component, exact, path, type, id }) =>
           type === "public" ? (
             <PublicRoute
+              key={id}
+              path={path}
+              exact={exact}
+              component={component}
+            />
+          ) : type === "private" ? (
+            <PrivateRoute
               key={id}
               path={path}
               exact={exact}

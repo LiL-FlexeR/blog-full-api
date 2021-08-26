@@ -3,4 +3,6 @@ export interface ITool {
   id: string;
   text: string;
   icon: any;
+  isAuth: boolean;
+  path?: string;
 }

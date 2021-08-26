@@ -1,3 +1,5 @@
+import { IPost } from "./saga";
+
 export interface IUser {
   name: string;
   _id: string;
@@ -6,6 +8,7 @@ export interface IUser {
   details?: string;
   profession?: string;
   skills?: string;
+  posts?: IPost[];
 }
 
 export interface IRootState {
