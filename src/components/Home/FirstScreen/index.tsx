@@ -1,18 +1,9 @@
-import React from "react";
+import { useStyles } from "./styled";
 
 const FirstScreen = () => {
-  return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      FirstScreen
-    </div>
-  );
+  const classes = useStyles();
+
+  return <div className={classes.bcg}></div>;
 };
 
 export default FirstScreen;

@@ -7,7 +7,10 @@ export const useStyles = makeStyles((theme) => ({
       marginTop: "5vh",
     },
     post: {
-      height: "40vh",
+      minHeight: "25vh",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
     },
     media: {
       height: "50%",
@@ -16,6 +19,10 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "40px",
       margin: "5vh 0",
       fontWeight: 700,
+    },
+    cardActions: {
+      display: "flex",
+      justifyContent: "space-between",
     },
   },
 }));
